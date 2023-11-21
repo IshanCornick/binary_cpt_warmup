@@ -1,6 +1,6 @@
 /*-----------------------------------*/
-/*--- IMPORT STYLES FOR Mortpages ---*/
-@import "minima/Nighthawkpages-styles";   
+/*--- IMPORT STYLES FOR Mortpages 
+@import "minima/Nighthawkpages-styles";   ---*/
 
 /*-----------------------------------*/
 /*--- CUSTOM STYLES FOR Nighthawkpages ---*/
@@ -15,10 +15,131 @@
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
 
+header, footer {
+    font-family: 'Lobster', cursive;
+    background-color: #61c0a8;
+}
+
+body {
+    font-family: 'Lobster', cursive; /* Replace 'YourHolidayFont' with the actual font name */
+    background-color: #ffffff; /* Set a background color for better visibility */
+    color: white;
+    background-image: url('https://images3.alphacoders.com/196/196797.jpg');
+    //filter: blur(8px);
+  }
+  .snow, .snow:before, .snow:after {
+    z-index: -3;
+    position: absolute;
+    top: -650px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+    background-size: 650px 650px;
+    animation: snow 3s linear infinite;
+    content: "";
+  }
+  
+  .snow:after {
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-duration: 6s;
+    animation-direction: reverse;
+    z-index: -4;
+  }
+  
+  .snow:before {
+    margin-left: -350px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-duration: 9s;
+    animation-direction: reverse;
+    z-index: -4;
+  }
+  
+  @keyframes snow {
+    to {
+      transform: translateY(650px);
+    }
+  }
+th {
+    color: white;
+    background-color: rgb(123, 35, 53)!important;
+    border-color: rgb(123, 35, 53)!important;
+}
+ul {
+  color: white;
+}
+tbody,td,tr,table {
+    font-family: 'Lobster', cursive;
+    color: white;
+    background-color: rgb(182, 49, 80);
+    border-color: rgb(123, 35, 53)!important;
+}
+a {
+    font-family: 'Lobster', cursive!important;
+    color: white!important;
+}
+h2,p {
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+  h1 {
+    font-size: 36px;
+    color: #cc0000; /* Use a deep red color for the text */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #ffffff; /* Add a subtle white shadow */
+  }
+  
+  /* Additional styles for a Christmas-themed feel */
+  h1::before {
+    content: '\2605'; /* Unicode character for a star */
+    font-size: 42px;
+    margin-right: 10px;
+  }
+  
+  h1::after {
+    content: '\2605';
+    font-size: 42px;
+    margin-left: 10px;
+  }
+  .basicChex{
+    color: white;
+  }
+  /* Animation for a twinkling effect */
+  @keyframes twinkling {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  h1::before, h1::after {
+    display: inline-block;
+    animation: twinkling 1.5s infinite; /* Apply the twinkling animation */
+    color: #ffd700; /* Set a gold color for the stars */
+  }
+  
+  form {
+    color: white;
+  }
+
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 // If you want to use dark themes uncomment out the following lines
-@import "minima/Nighthawkpages-dracula-highlight"; 
-@import "minima/Dark_Mode"; // Dracula Highlight recommended for dark mode
+// @import "minima/Nighthawkpages-dracula-highlight"; 
+// @import "minima/Dark_Mode"; // Dracula Highlight recommended for dark mode
 
 // FOR HAMILTON
 // @import "minima/hamilton/skins/daylight";
