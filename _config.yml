@@ -5,6 +5,7 @@ github_username: Tirth-Thakkar
 github_repo: "Nighthawk-Pages"
 baseurl: "/Nighthawk-Pages"
 remote_theme: jekyll/minima
+theme: jekyll-theme-minima
 minima:
   social_links:
     - { platform: github, user_url: "https://github.com/nighthawkcoders"}
