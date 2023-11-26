@@ -19,13 +19,13 @@ header, footer {
 }
 
 /* Text Background for Header and Footer for Readability */
-header h1, header nav, footer h1, footer nav {
-  background-color: rgba(255, 255, 255, 0.7); /* Adjusted for better visibility */
-  color: rgb(255, 255, 255); /* Ensuring text color is black for contrast */
-  display: inline-block; /* Changed to inline-block for better control */
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 2px; /* Added a small margin */
+.site-header h1, .site-header nav {
+  background-color: white; /* White background */
+  color: black; /* Black text color */
+  padding: 5px 10px; /* Padding for some space around the text */
+  border-radius: 5px; /* Rounded corners for aesthetic */
+  display: inline-block; /* Inline-block for proper spacing */
+  margin: 2px; /* Margin to separate from other elements */
 }
 
 /* Speed Blur Effect for Titles */
