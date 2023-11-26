@@ -6,24 +6,21 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #1a1a1a; /* Dark background for a sleek look */
   color: white;
-  background-image: url('https://images.ps-aws.com/c?url=https%3A%2F%2Fd3cm515ijfiu6w.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F11%2F25162106%2Fmercedes-lewis-hamilton-abu-dhabi-grand-prix.jpg'); /* Racing-themed image */
+  background-image: url('https://wallpapers.com/images/hd/racing-background-m5c64q8y5anufafk.jpg'); /* Racing-themed image */
 }
 
-/* Checkered Pattern for Header and Footer */
 header, footer {
   background-image: 
-      linear-gradient(45deg, #000 25%, transparent 25%), 
-      linear-gradient(-45deg, #000 25%, transparent 25%), 
-      linear-gradient(45deg, transparent 75%, #000 75%), 
-      linear-gradient(-45deg, transparent 75%, #000 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-  color: #ffff;
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(45deg, black 25%, white 25%, white 75%, black 75%, white);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color: white;
 }
 
-/* Text Background for Header for Readability */
-header h1, header nav {
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+/* Text Background for Header and Footer for Readability */
+header h1, header nav, footer h1, footer nav {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
   display: inline;
   padding: 5px 10px;
   border-radius: 5px;
