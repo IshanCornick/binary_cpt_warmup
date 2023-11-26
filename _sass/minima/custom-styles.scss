@@ -1,148 +1,105 @@
 /*-----------------------------------*/
-/*--- IMPORT STYLES FOR Mortpages 
-@import "minima/Nighthawkpages-styles";   ---*/
-
-/*-----------------------------------*/
 /*--- CUSTOM STYLES FOR Nighthawkpages ---*/
-// Uncomment out the following themes to use them 
+/*--- Racing Theme Modifications ---*/
 
-// @import "minima/hacker/jekyll-theme-hacker"; //Hacker theme 
-// @import "minima/minimal-mistakes"; //Minimal Mistakes theme 
-// @import "minima/monophase/main"; //Monophase theme 
-// @import "minima/leaf/_leaf";  //Leaf theme 
-// @import "minima/hamilton/main"; //Hamilton theme
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a; /* Dark background for a sleek look */
+  color: white;
+  background-image: url('https://images.ps-aws.com/c?url=https%3A%2F%2Fd3cm515ijfiu6w.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F11%2F25162106%2Fmercedes-lewis-hamilton-abu-dhabi-grand-prix.jpg'); /* Racing-themed image */
+}
+
+/* Checkered Pattern for Header and Footer */
+header, footer {
+  background-image: 
+      linear-gradient(45deg, #000 25%, transparent 25%), 
+      linear-gradient(-45deg, #000 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #000 75%), 
+      linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  color: #ffff;
+}
+
+/* Text Background for Header for Readability */
+header h1, header nav {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  display: inline;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Speed Blur Effect for Titles */
+h1 {
+  font-size: 36px;
+  color: #ffffff; /* Black for main headings */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  animation: blur-motion 1s infinite alternate;
+}
+
+@keyframes blur-motion {
+  from {
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  }
+  to {
+      text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Dynamic Hover Effects for Links */
+a, a:hover {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff; /* Black for links */
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ffeb3b; /* Yellow on hover */
+}
+
+/* Table Styling */
+th {
+  background-color: #424242; /* Dark grey for table headers */
+}
+
+tbody, td, tr, table {
+  font-family: 'Roboto', sans-serif;
+  background-color: #b4a2a2; /* Medium grey for table backgrounds */
+}
+
+/* Dashboard-like Elements */
+.dashboard-style {
+  font-family: 'Digital-7', monospace; /* Digital font */
+  color: #4caf50; /* Green like dashboard lights */
+}
+
+/* Grid Layout for Sections */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Button with Racing Style */
+.button-race {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button-race:hover {
+  background-color: #ffeb3b;
+  color: black;
+}
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-
-header, footer {
-    font-family: 'Lobster', cursive;
-    background-color: #61c0a8;
-}
-
-body {
-    font-family: 'Lobster', cursive; /* Replace 'YourHolidayFont' with the actual font name */
-    background-color: #ffffff; /* Set a background color for better visibility */
-    color: white;
-    background-image: url('https://images3.alphacoders.com/196/196797.jpg');
-    //filter: blur(8px);
-  }
-  .snow, .snow:before, .snow:after {
-    z-index: -3;
-    position: absolute;
-    top: -650px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: 
-    radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
-    radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
-    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
-    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
-    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
-    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
-    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
-    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
-    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
-    background-size: 650px 650px;
-    animation: snow 3s linear infinite;
-    content: "";
-  }
-  
-  .snow:after {
-    margin-left: -250px;
-    opacity: 0.5;
-    filter: blur(2px);
-    animation-duration: 6s;
-    animation-direction: reverse;
-    z-index: -4;
-  }
-  
-  .snow:before {
-    margin-left: -350px;
-    opacity: 0.7;
-    filter: blur(1px);
-    animation-duration: 9s;
-    animation-direction: reverse;
-    z-index: -4;
-  }
-  
-  @keyframes snow {
-    to {
-      transform: translateY(650px);
-    }
-  }
-th {
-    color: white;
-    background-color: rgb(123, 35, 53)!important;
-    border-color: rgb(123, 35, 53)!important;
-}
-ul {
-  color: white;
-}
-tbody,td,tr,table {
-    font-family: 'Lobster', cursive;
-    color: white;
-    background-color: rgb(182, 49, 80);
-    border-color: rgb(123, 35, 53)!important;
-}
-a {
-    font-family: 'Lobster', cursive!important;
-    color: white!important;
-}
-h2,p {
-    font-family: 'Lobster', cursive;
-    color: white;
-}
-  h1 {
-    font-size: 36px;
-    color: #cc0000; /* Use a deep red color for the text */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #ffffff; /* Add a subtle white shadow */
-  }
-  
-  /* Additional styles for a Christmas-themed feel */
-  h1::before {
-    content: '\2605'; /* Unicode character for a star */
-    font-size: 42px;
-    margin-right: 10px;
-  }
-  
-  h1::after {
-    content: '\2605';
-    font-size: 42px;
-    margin-left: 10px;
-  }
-  .basicChex{
-    color: white;
-  }
-  /* Animation for a twinkling effect */
-  @keyframes twinkling {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
-  }
-  
-  h1::before, h1::after {
-    display: inline-block;
-    animation: twinkling 1.5s infinite; /* Apply the twinkling animation */
-    color: #ffd700; /* Set a gold color for the stars */
-  }
-  
-  form {
-    color: white;
-  }
-
-// If you want to turn off dark background for syntax highlighting, comment or delete the below line.
-// If you want to use dark themes uncomment out the following lines
-// @import "minima/Nighthawkpages-dracula-highlight"; 
-// @import "minima/Dark_Mode"; // Dracula Highlight recommended for dark mode
-
-// FOR HAMILTON
-// @import "minima/hamilton/skins/daylight";
-// @import "minima/hamilton/skins/midnight";
-// @import "minima/hamilton/skins/sunrise";
-// @import "minima/hamilton/skins/sunset"
