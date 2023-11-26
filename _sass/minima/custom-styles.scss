@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #1a1a1a; /* Dark background for a sleek look */
+  background-color: #000000; /* Dark background for a sleek look */
   color: white;
   background-image: url('https://wallpapers.com/images/hd/racing-background-m5c64q8y5anufafk.jpg'); /* Racing-themed image */
 }
@@ -20,10 +20,12 @@ header, footer {
 
 /* Text Background for Header and Footer for Readability */
 header h1, header nav, footer h1, footer nav {
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-  display: inline;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjusted for better visibility */
+  color: rgb(255, 255, 255); /* Ensuring text color is black for contrast */
+  display: inline-block; /* Changed to inline-block for better control */
   padding: 5px 10px;
   border-radius: 5px;
+  margin: 2px; /* Added a small margin */
 }
 
 /* Speed Blur Effect for Titles */
@@ -52,23 +54,23 @@ a, a:hover {
 }
 
 a:hover {
-  color: #ffeb3b; /* Yellow on hover */
+  color: #ffffff; /* Yellow on hover */
 }
 
 /* Table Styling */
 th {
-  background-color: #424242; /* Dark grey for table headers */
+  background-color: #ff0000; /* Dark grey for table headers */
 }
 
 tbody, td, tr, table {
   font-family: 'Roboto', sans-serif;
-  background-color: #b4a2a2; /* Medium grey for table backgrounds */
+  background-color: #ffffff; /* Medium grey for table backgrounds */
 }
 
 /* Dashboard-like Elements */
 .dashboard-style {
   font-family: 'Digital-7', monospace; /* Digital font */
-  color: #4caf50; /* Green like dashboard lights */
+  color: #000000; /* Green like dashboard lights */
 }
 
 /* Grid Layout for Sections */
@@ -94,7 +96,7 @@ tbody, td, tr, table {
 }
 
 .button-race:hover {
-  background-color: #ffeb3b;
+  background-color: #ffffff;
   color: black;
 }
 
