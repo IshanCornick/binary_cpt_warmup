@@ -4,28 +4,34 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff; /* Dark background for a sleek look */
+  background-color: #000000; /* Dark background for a sleek look */
   color: white;
-  background-image: url('https://wallpaperaccess.com/full/347704.jpg'); /* Racing-themed image */
+  background-image: url('https://wallpapers.com/images/hd/racing-background-m5c64q8y5anufafk.jpg'); /* Racing-themed image */
 }
 
 
 header, footer {
-  background-image: url('https://4kwallpapers.com/images/wallpapers/ferrari-sf21-f1-2021-f1-cars-2021-formula-one-world-3440x1440-4865.jpeg');
-  background-size: cover; /* This will cover the entire area, might zoom out the image */
-  background-position: center; /* This centers the image in the element */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-color: #e22f2f; /* Bold red background for a racing theme */
+  color: white; /* White text for contrast and readability */
+  padding: 10px 0;
+  text-align: center;
 }
 
-/* Text Background for Header and Footer for Readability */
-.site-header h1, .site-header nav, .site-header title {
-  background-color: white !important; /* White background */
-  color: black !important; /* Black text color */
-  padding: 5px 10px; /* Padding for some space around the text */
-  border-radius: 5px; /* Rounded corners for aesthetic */
-  display: inline-block; /* Inline-block for proper spacing */
-  margin: 2px; /* Margin to separate from other elements */
+/* Styling for header and footer text */
+header h1, footer h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: #ffffff; /* White color for text */
+  text-shadow: 2px 2px 2px #000; /* Text shadow for better readability */
 }
+
+/* Additional styling for navigation links, if applicable */
+header nav a, footer nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
 
 /* Speed Blur Effect for Titles */
 h1 {
@@ -45,11 +51,18 @@ h2 {
 p {
   font-size: 20px;
   color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.75); /* 50% transparent black background */
+  padding: 10px; /* Add padding for better readability */
+  border-radius: 5px; /* Optional: rounded corners */
 }
+
 
 li {
   font-size: 15px;
   color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.75); /* 50% transparent black background */
+  padding: 10px; /* Add padding for better readability */
+  border-radius: 5px; /* Optional: rounded corners */
 }
 
 @keyframes blur-motion {
