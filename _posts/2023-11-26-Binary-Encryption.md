@@ -14,8 +14,6 @@ courses: {'compsci': {'week': 1}}
     <button onclick="decrypt()">Decrypt</button><br>
     <h2>Result:</h2>
     <p id="result"></p>
-
-    <script src="script.js"></script>
 </body>
 </html>
 <script>
