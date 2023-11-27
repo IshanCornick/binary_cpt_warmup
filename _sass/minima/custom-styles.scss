@@ -9,16 +9,16 @@ body {
   background-image: url('https://wallpaperaccess.com/full/347704.jpg'); /* Racing-themed image */
 }
 
+
 header, footer {
-  background-image: url('https://i.redd.it/2u0wl6w0ly381.jpg');
+  background-image: url('https://i.redd.it/r6io7pzfzx261.png');
   background-size: cover; /* This will cover the entire area, might zoom out the image */
   background-position: center; /* This centers the image in the element */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-
 /* Text Background for Header and Footer for Readability */
-.site-header h1, .site-header nav {
+.site-header h1, .site-header nav, .site-header title {
   background-color: white !important; /* White background */
   color: black !important; /* Black text color */
   padding: 5px 10px; /* Padding for some space around the text */
