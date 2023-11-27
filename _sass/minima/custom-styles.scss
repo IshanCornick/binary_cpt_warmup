@@ -11,7 +11,7 @@ body {
 
 
 header, footer {
-  background-image: url('https://i.redd.it/r6io7pzfzx261.png');
+  background-image: url('https://4kwallpapers.com/images/wallpapers/ferrari-sf21-f1-2021-f1-cars-2021-formula-one-world-3440x1440-4865.jpeg');
   background-size: cover; /* This will cover the entire area, might zoom out the image */
   background-position: center; /* This centers the image in the element */
   background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -64,13 +64,13 @@ li {
 /* Dynamic Hover Effects for Links */
 a, a:hover {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff; /* Black for links */
+  color: #000000; /* Black for links */
   text-decoration: underline;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #ffffff; /* Yellow on hover */
+  color: #000000; /* Yellow on hover */
 }
 
 /* Table Styling */
