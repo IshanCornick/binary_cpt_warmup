@@ -6,6 +6,7 @@ type: hacks
 courses: {'compsci': {'week': 1}}
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -44,9 +45,12 @@ courses: {'compsci': {'week': 1}}
 
         clearCanvas();
 
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const imageUrl = proxyUrl + imageLink;
+
         const img = new Image();
-        img.crossOrigin = "Anonymous";
-        img.src = imageLink;
+        img.crossOrigin = 'Anonymous';
+        img.src = imageUrl;
 
         img.onload = function() {
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
