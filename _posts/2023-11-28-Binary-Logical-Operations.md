@@ -28,7 +28,8 @@ courses: {'compsci': {'week': 1}}
         </select>
     </div>
     <button onclick="performOperation()">Calculate</button>
-    <div id="result">Result: </div>
+    <br>
+    <div23 id="result">Result: </div23>
     <script>
         function performOperation() {
             const input1 = document.getElementById('input1').value;
