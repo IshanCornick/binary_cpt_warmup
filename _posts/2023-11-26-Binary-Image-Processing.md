@@ -50,11 +50,16 @@ courses: {'compsci': {'week': 1}}
 
         const img = new Image();
         img.crossOrigin = 'Anonymous';
-        img.src = imageUrl;
 
         img.onload = function() {
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         };
+
+        img.onerror = function() {
+          alert('Error loading image. Please check the URL and try again.');
+        };
+
+        img.src = imageUrl;
       }
 
       drawBinaryImage();
