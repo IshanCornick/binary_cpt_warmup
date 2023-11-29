@@ -37,12 +37,10 @@ courses: {'compsci': {'week': 1}}
         <button id="redo">Redo</button>
         <div id="timer">Time: 00:00</div>
     </div>
-
     <script>
         function generateGrid(size) {
             const container = document.getElementById('puzzle-container');
             container.style.gridTemplateColumns = `repeat(${size}, 50px)`;
-
             for (let i = 0; i < size; i++) {
                 for (let j = 0; j < size; j++) {
                     const cell = document.createElement('div');
@@ -52,7 +50,6 @@ courses: {'compsci': {'week': 1}}
                 }
             }
         }
-
         function toggleCellValue(cell) {
             if (cell.textContent === '') {
                 cell.textContent = '1';
@@ -62,7 +59,6 @@ courses: {'compsci': {'week': 1}}
                 cell.textContent = '';
             }
         }
-
         document.addEventListener('DOMContentLoaded', () => {
             generateGrid(6); // Initialize 6x6 grid
         });
