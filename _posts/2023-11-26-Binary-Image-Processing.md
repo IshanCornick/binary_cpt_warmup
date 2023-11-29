@@ -12,7 +12,8 @@ courses: {'compsci': {'week': 1}}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Binary Image Processing with JS</title>
   <style>
-    #processButton { display: none; } /* Initially hide the process button */
+    #processButton, #originalButton { display: none; }
+    #canvas { border: 1px solid #000; }
   </style>
 </head>
 <body>
@@ -22,9 +23,10 @@ courses: {'compsci': {'week': 1}}
   <br>
   <button id="loadButton">Load Image</button>
   <br>
-  <canvas id="canvas" width="300" height="300" style="border:1px solid #000;"></canvas>
+  <canvas id="canvas"></canvas>
   <br>
   <button id="processButton">Process Image to Binary</button>
+  <button id="originalButton">Show Original Image</button>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -32,7 +34,9 @@ courses: {'compsci': {'week': 1}}
       const ctx = canvas.getContext('2d');
       const loadButton = document.getElementById('loadButton');
       const processButton = document.getElementById('processButton');
+      const originalButton = document.getElementById('originalButton');
       let img = new Image();
+      let originalImageLoaded = false;
 
       function clearCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -49,18 +53,24 @@ courses: {'compsci': {'week': 1}}
         clearCanvas();
         img.crossOrigin = 'Anonymous';
         img.onload = function() {
+          canvas.width = img.width / 2;
+          canvas.height = img.height / 2;
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          processButton.style.display = 'inline'; // Show process button on image load
+          originalImageLoaded = true;
+          processButton.style.display = 'inline';
+          originalButton.style.display = 'none';
         };
         img.onerror = function() {
           alert('Error loading image. Please check the URL and try again.');
-          processButton.style.display = 'none'; // Hide process button on error
+          processButton.style.display = 'none';
+          originalButton.style.display = 'none';
         };
 
         img.src = imageLink;
       }
 
-      function convertToBinary(imageData) {
+      function convertToBinary() {
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         const data = imageData.data;
         for (let i = 0; i < data.length; i += 4) {
           const brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2];
@@ -68,22 +78,30 @@ courses: {'compsci': {'week': 1}}
           const color = brightness > threshold ? 255 : 0;
           data[i] = data[i + 1] = data[i + 2] = color;
         }
-        return imageData;
+        ctx.putImageData(imageData, 0, 0);
       }
 
       function processImage() {
-        if (!img.src) {
+        if (!originalImageLoaded) {
           alert('Please load an image first.');
           return;
         }
+        convertToBinary();
+        processButton.style.display = 'none';
+        originalButton.style.display = 'inline';
+      }
 
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const binaryData = convertToBinary(imageData);
-        ctx.putImageData(binaryData, 0, 0);
+      function showOriginalImage() {
+        if (originalImageLoaded) {
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          processButton.style.display = 'inline';
+          originalButton.style.display = 'none';
+        }
       }
 
       loadButton.addEventListener('click', loadAndDisplayImage);
       processButton.addEventListener('click', processImage);
+      originalButton.addEventListener('click', showOriginalImage);
     });
   </script>
 </body>
