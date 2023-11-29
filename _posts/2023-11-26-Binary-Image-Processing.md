@@ -6,7 +6,6 @@ type: hacks
 courses: {'compsci': {'week': 1}}
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
