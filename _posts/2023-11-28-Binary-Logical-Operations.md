@@ -12,7 +12,7 @@ courses: {'compsci': {'week': 1}}
     <title>Binary Logical Operations</title>
 </head>
 <body>
-    <h1>Binary Logic Operations</h1>
+    <br>
     <label>Input 1: <input type="text" id="input1" placeholder="Enter binary number"></label>
     <br>
     <br>
