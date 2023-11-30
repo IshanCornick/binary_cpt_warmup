@@ -9,23 +9,6 @@ courses: {'compsci': {'week': 1}}
 <html>
 <head>
     <title>Binary Puzzle</title>
-    <style>
-        #puzzle-container {
-            display: grid;
-            grid-template-columns: repeat(6, 50px); /* Example for 6x6 grid */
-            grid-gap: 5px;
-        }
-        .puzzle-cell {
-            width: 50px;
-            height: 50px;
-            border: 1px solid black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
     <div id="puzzle-container">
