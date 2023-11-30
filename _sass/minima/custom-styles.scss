@@ -6,12 +6,12 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #000000; /* Dark background for a sleek look */
   color: white;
-  background-image: url('https://wallpaperaccess.com/full/268067.jpg'); /* Racing-themed image */
+  background-image: url('https://wallpaperaccess.com/full/268067.jpg'); 
 }
 
 
 header, footer {
-  background-color: #21d227; /* Bold red background for a racing theme */
+  background-color: #21d227; 
   color: white; /* White text for contrast and readability */
   padding: 10px 0;
   text-align: center;
@@ -109,7 +109,6 @@ tbody, td, tr, table {
   gap: 10px;
 }
 
-/* Button with Racing Style */
 .button-race {
   background-color: #000000;
   border: none;
