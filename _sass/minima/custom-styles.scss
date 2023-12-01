@@ -173,5 +173,19 @@ div44 {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+textarea, #binaryOutput {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+#binaryOutput {
+  white-space: pre-wrap;
+  background-color: #000000;
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #000000;
+}
+
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
